@@ -3,8 +3,6 @@ let chute;
 let idade;
 let nome;
 
-console.log (numero);
-
 let entrada = prompt("Digite um número inteiro");
 let numero = parseInt(entrada);
 
