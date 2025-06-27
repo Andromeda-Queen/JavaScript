@@ -1,13 +1,13 @@
-alert("Comando para mostrar um texto na tela, posso usar aspas duplas ou aspas simples, mas siga esse padrão em todo o código");
-let chute;
-let idade;
-let nome;
+let quantidade = parseInt(prompt("Quantos números você deseja fazer a média?"));
 
-let entrada = prompt("Digite um número inteiro");
-let numero = parseInt(entrada);
+let soma = 0;
 
-if (Number.isInteger(numero)){
-    console.log("Obrigado! Voce digitou um inteiro.");
-} else {
-    console.log("Por favor, digite um número inteiro válido.")
+for (let i = 1; i <= quantidade; i++) {
+    let numero = parseFloat(prompt(`Digite o ${i}º número:`));
+    soma += numero;
 }
+
+let media = soma / quantidade;
+
+alert(`A média dos números é: ${media}`);
+
