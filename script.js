@@ -55,7 +55,7 @@ function jogoMedia() {
 }
 
 function calcularSoma() {
-    alert("bem vindo ao jogo da soma!");
+    alert("Bem vindo ao jogo da soma!");
 
     const quantidade = parseInt(prompt("Quantos números deseja somar?"));
     if (isNaN(quantidade) || quantidade <= 0) {
