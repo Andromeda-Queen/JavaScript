@@ -57,16 +57,22 @@ function jogoMedia() {
 }
 
 function calcularSoma() {
-    const n1 = parseFloat(document.getElementById("num1").value);
-    const n2 = parseFloat(document.getElementById("num2").value);
-    const resultado = document.getElementById("resultado");
-
-    if (isNaN(n1) || isNaN(n2)) {
-        resultado.textContent = "Por favor, insira dois números válidos.";
+    const quantidade = parseInt(prompt("Quantos números deseja somar?"));
+    if (isNaN(quantidade) || quantidade <= 0) {
+        alert("Quantidade inválida.");
         return;
     }
 
-    const soma = n1 + n2;
-    resultado.textContent = `A soma é: ${soma}`;
+    let soma = 0;
+    for (let i = 1; i <= quantidade; i++) {
+        const numero = parseFloat(prompt(`Informe o ${i}º número:`));
+        if (isNaN(numero)) {
+            alert("Número inválido. Tente novamente.");
+            return;
+        }
+        soma += numero;
+    }
+    
+    alert(`A soma dos números é: ${soma.toFixed(2)}`);
 }
 
